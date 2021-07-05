@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    outline: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+.container{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+#main-header{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(33,35,67);
+}
+
+#main-header > .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    line-height: 80px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#btn-menu{
+    display: none;
+    cursor: pointer;
+    font-size: 23px;
+    color: white;
+    border: 0;
+    background-color: transparent;
+}
+
+#menu li{
+    margin: 0 10px;
+    display: inline-block;
+}
+
+#menu a{
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    transition: color 300ms;
+}
+
+#menu a:hover{
+    color: #e7426b;
+}
+
+/* Background */
+
+#main-bg{
+    width: 100%;
+    height: 80%;
+    background-image: url('../imagens/header_bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#main-bg > .container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+#box-form{
+    width: 100%;
+    max-width: 400px;
+    padding: 50px;
+    opacity: 0;
+    text-align: center;
+    background-color: whitesmoke;
+    animation: fadeIn 500ms 1s forwards;
+}
+
+#box-form h1{
+    color: rgb(33,35,67);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.inputs input{
+    width: 100%;
+    height: 45px;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(33,35,67);
+    font-weight: 500;
+    margin: 10px 0;
+    padding-left: 10px;
+    font-size: 15px;
+    color: rgb(33,35,67);
+}
+
+.inputs input:not(.inputs input[type="submit"]):focus{
+    border-bottom: 2px solid#5e3ea1;
+}
+
+.inputs input[type="submit"]{
+    padding: 0;
+    height: 55px;
+    background-image: linear-gradient(to right,rgb(33,35,67),#4c3282);
+    color: white;
+    cursor: pointer;
+    border: 0;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+/* Sobre */
+
+section#about{
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0px 0px 10px -2px #ccc;
+}
+
+.title{
+    width: 100%;
+    text-align: center;
+}
+
+.title h2{
+    color: rgb(33,35,67);
+    font-size: 25px;
+}
+
+.title i{
+    color: #e7426b;
+}
+
+#about p{
+    font-weight: 500;
+    font-size: 15px;
+    max-width: 500px;
+    display: inline-block;
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.arrow i{
+    font-size: 19px;
+}
+
+/* Diferenciais */
+
+section#diferenciais{
+    padding: 30px 0;
+    text-align: center;
+}
+
+#diferenciais h2{
+    margin: 10px 0;
+}
+
+.box-icon-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box-icon{
+    width: 33.3%;
+    margin: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 10px -2px #ccc;
+    color: rgb(33,35,67);
+}
+
+.box-icon-header{
+    width: 100%;
+}
+
+.box-icon-header i{
+    font-size: 30px;
+    padding: 30px;
+    border: 2px solid rgb(33,35,67);
+    border-radius: 50%;
+    color: rgb(33,35,67);
+}
+
+.box-icon-body h2{
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 19px;
+}
+
+.box-icon-body p{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 14px;
+    max-width: 300px;
+    text-align: justify;
+}
+
+/* Contato */
+
+section#contato{
+    padding: 30px 0;
+    background-color: whitesmoke;
+}
+
+.form-contato{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.inputs-contato input{
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    padding-left: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(33,35,67);
+    border: 2px solid rgb(33,35,67);
+}
+
+.inputs-contato textarea{
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 15px;
+    resize: vertical;
+    font-weight: 500;
+    color: rgb(33,35,67);
+    border: 2px solid rgb(33,35,67);
+}
+
+.inputs-contato input[type="submit"]{
+    font-size: 17px;
+    height: 70px;
+    padding: 0;
+    background-color: rgb(33,35,67);
+    border: 0;
+    color: whitesmoke;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 300ms;
+}
+
+.inputs-contato input[type="submit"]:hover{
+    background-color: #4c3282;
+}
+
+/* Footer */
+
+footer{
+    width: 100%;
+    background-color: #4c3282;
+}
+
+footer .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .logo img{
+    width: 135px;
+}
+
+footer span{
+    font-weight: normal;
+    color: white;
+    font-size: 15px;
+}
+
+@media (max-width: 1024px){
+    .box-icon-wrapper{
+        flex-direction: column;
+    }
+
+    .box-icon{
+        width: 100%;
+        max-width: 500px;
+    }
+
+}
+
+@media (max-width: 768px){
+    /* Menu Mobile */
+    #btn-menu{
+        display: block;
+    }
+
+    #menu{
+        width: 100%;
+        height: 0px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-image: linear-gradient(to right,#4c3282,#665fb3);
+        z-index: 9999;
+        overflow-y: hidden;
+        display: block;
+        height: 0;
+        opacity: 0;
+        transition: .4s;
+    }
+
+    #menu li{
+        margin: 30px;
+        display: block;
+    }
+
+    #menu.active{
+        opacity: 1;
+        height: 250px;
+    }
+
+}
